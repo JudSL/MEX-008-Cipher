@@ -2,13 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Informes policiacos</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
+    <header>
+      <img src = "" alt="">
+      <h1>Informes policiacos</h1>
+    </header>
+    <section id = "login-page">
+      <label for = "text" id= "registration">Matrícula:</label>
+      <input type = "text" id= "registrationBox" placeholder = "Ingresa tu matrícula"
+              required>
+      <input type = "button" id = "loginButton" value = "Ingresar">
+    </section>
+    <section id = "options-page" class = "hide">
+      <h2>Bienvenido oficial No.</h2>
+      <h2 id = registrationPersonal></h2>
+      <h3>Elige la opción que quieres realizar</h3>
+      <input type = "button" id = "cipherButton" value = "Cifrar">
+      <input type = "button" id = "decipherButton" value = "Descifrar">
+    </section>
+    <section id = "cipher-page" class = "hide">
+      <h4>CIFRAR</h4>
+    </section>
+    <section id = 'decipher-page' class = "hide">
+      <h4>DESCIFRAR</h4>
+    </section>
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
