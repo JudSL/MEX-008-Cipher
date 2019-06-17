@@ -5,6 +5,19 @@
   const showSection = (id) => {
     document.getElementById(id).classList.remove('hide');
   }
+//Botón de ayuda y botón de cerrar
+const helpButton = document.getElementById('help-button')
+const closeButton = document.getElementById('close-button')
+//Mostrar y cerrar sección de ayuda
+const showInstructions = () =>  {
+  showSection('instructions-page')
+}
+const hideInstructions = () => {
+  hideSection('instructions-page')
+}
+helpButton.addEventListener('click',showInstructions)
+closeButton.addEventListener('click',hideInstructions)
+
 //First page
 const startButton = document.getElementById('loginButton');
 let policeNumber = document.getElementById('registrationPersonal');
@@ -12,8 +25,6 @@ let policeNumber = document.getElementById('registrationPersonal');
 const getRegistration = () => {
   const registration = document.getElementById('registrationBox').value;
   policeNumber.innerHTML = registration;
-  // document.getElementById('login-page').classList.add('hide');
-  // document.getElementById('options-page').classList.remove('hide');
   hideSection('login-page');
   showSection('options-page');
 }
@@ -54,12 +65,12 @@ const openDecipherPage = () => {
 }
 decipher.addEventListener('click', openDecipherPage)
 //Guardando valores para el texto a decodificar
-const buttonToDecipher = document.getElementById('button-to-decipher');
-buttonToDecipher.addEventListener('click', function (){
-  let offsetBoxD = document.getElementById('box-to-decipher').value;
-  let decipherText = document.getElementById('box-decipher-text').value;
-  document.getElementById('box-decipher-text').innerHTML = window.cipher.encode(offsetBoxD,decipherText)
-});
+  // const buttonToDecipher = document.getElementById('button-to-decipher');
+  // buttonToDecipher.addEventListener('click', function (){
+  //   let offsetBoxD = document.getElementById('box-to-decipher').value;
+  //   let decipherText = document.getElementById('box-decipher-text').value;
+  //   document.getElementById('box-decipher-text').innerHTML = window.cipher.encode(offsetBoxD,decipherText)
+  // });
 
 //Dando funcionalidad al botón volver
 const backD = document.getElementById('button-back-d');
