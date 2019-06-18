@@ -55,7 +55,7 @@
       <h4>CIFRAR</h4>
       <div class = 'offset'>
         <label class = 'selectOffset'>Elige una clave numérica:</label>
-        <input id = "offset-box" type = "number" class = 'offsetBox'>
+        <input id = "offset-box-c" type = "number" class = 'offsetBox'>
       </div>
       <div class="toCipher">
         <label class = "textToCipher">Texto a cifrar:</label>
@@ -70,19 +70,19 @@
       <input type="button" id = "button-exit-c" value="Salir">
     </section>
 
-    <section id = 'decipher-page' class = "hide">
+    <section id='decipher-page' class="hide">
       <h4>DESCIFRAR</h4>
-      <div class = 'offset'>
-        <label class = 'selectOffset'>Ingresa clave numérica:</label>
-        <input id = "offset-box" type = "number" class = 'offsetBox'>
+      <div class='offset'>
+        <label class='selectOffset'>Ingresa clave numérica:</label>
+        <input id ="offset-box-d" type="number" class = 'offsetBox'>
       </div>
       <div class="toDecipher">
         <label class = "textToDecipher">Texto a descifrar:</label>
-        <textarea id = "box-to-decipher" class = "boxToDecipher" placeholder="Ingresa el texto a descifrar"></textarea>
+        <textarea id="box-to-decipher" class="boxToDecipher" placeholder="Ingresa el texto a descifrar"></textarea>
       </div>
-      <input type="button" name="button-to-decipher" value="Descifrar">
-      <div id = "decipher-text" class="decipherText">
-        <p id = "box-decipher-text"></p>
+      <input type="button" id="button-to-decipher" value="Descifrar">
+      <div id="decipher-text" class="decipherText">
+          <p id="box-decipher-text"></p>
       </div>
       <input type="button" id = "button-clean-d" value="Limpiar">
       <input type="button" id = "button-back-d" value="Volver">

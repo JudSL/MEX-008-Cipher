@@ -38,11 +38,27 @@ const openCipherPage = () => {
 cipher.addEventListener('click', openCipherPage);
 //Guardando valores para el texto a codificar
 const buttonToCipher = document.getElementById('button-to-cipher');
-buttonToCipher.addEventListener('click', function (){
-  let offsetBoxC = document.getElementById('box-to-cipher').value;
-  let cipherText = document.getElementById('box-cipher-text').value;
-  document.getElementById('box-cipher-text').innerHTML = window.cipher.encode(offsetBoxC,cipherText)
-});
+let offsetBoxC = document.getElementById('offset-box-c');
+let textToCipher = document.getElementById('box-to-cipher');
+
+
+const cipherResult = () => {
+  const blankSpaceC = document.getElementById('box-cipher-text');
+  let offsetC = parseInt(offsetBoxC.value);
+  let textCipher = window.cipher.encode(offsetC, textToCipher.value);
+
+  //document.getElementById('box-cipher-text').value;
+
+  blankSpaceC.innerHTML = textCipher;
+}
+buttonToCipher.addEventListener('click',cipherResult);
+
+// const buttonToCipher = document.getElementById('button-to-cipher');
+// buttonToCipher.addEventListener('click', function (){
+//   let offsetBoxC = document.getElementById('box-to-cipher').value;
+//   let cipherText = document.getElementById('box-cipher-text').value;
+//   document.getElementById('box-cipher-text').innerHTML = window.cipher.encode(offsetBoxC,cipherText);
+// });
   //Dando funcionalidad al botón volver
   const backC = document.getElementById('button-back-c');
   const backOptionsPageC= () => {
@@ -63,14 +79,26 @@ const openDecipherPage = () => {
   hideSection('options-page');
   showSection('decipher-page');
 }
-decipher.addEventListener('click', openDecipherPage)
+decipher.addEventListener('click', openDecipherPage);
 //Guardando valores para el texto a decodificar
-  // const buttonToDecipher = document.getElementById('button-to-decipher');
-  // buttonToDecipher.addEventListener('click', function (){
-  //   let offsetBoxD = document.getElementById('box-to-decipher').value;
-  //   let decipherText = document.getElementById('box-decipher-text').value;
-  //   document.getElementById('box-decipher-text').innerHTML = window.cipher.encode(offsetBoxD,decipherText)
-  // });
+const buttonToDecipher = document.getElementById('button-to-decipher');
+let offsetBoxD = document.getElementById('offset-box-d');
+let textToDecipher = document.getElementById('box-to-decipher');
+
+const decipherResult = () => {
+  const blankSpaceD = document.getElementById('box-decipher-text');
+  let offsetD = parseInt(offsetBoxD.value);
+  let textDecipher = window.cipher.decode(offsetD, textToDecipher.value);
+  //document.getElementById('box-cipher-text').value
+  blankSpaceD.innerHTML = textDecipher;
+}
+buttonToDecipher.addEventListener('click', decipherResult);
+// const buttonToDecipher = document.getElementById('button-to-decipher');
+// buttonToDecipher.addEventListener('click', function (){
+//   let offsetBoxD = document.getElementById('box-to-decipher').value;
+//   let decipherText = document.getElementById('box-decipher-text').value;
+//   document.getElementById('box-decipher-text').innerHTML = window.cipher.encode(offsetBoxD,decipherText);
+// });
 
 //Dando funcionalidad al botón volver
 const backD = document.getElementById('button-back-d');
