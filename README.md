@@ -3,7 +3,7 @@
 ## Presentación:
 Esta página se creó para cifrar informes e investigaciones de índole policial.
 
-##¿Cómo surgió la idea?
+## ¿Cómo surgió la idea?
 Hablando con un amigo que estuvo en la policía estatal del Estado de México, comentó que muchas de las investigaciones e incluso algunos operativos se truncaban o saboteaban debido a que alguien pasaba información delicada de las averiguaciones previas. Es por esa razón que se decidió hacer una página que cifre y descifre los informes.
 
 ## Definición del usuario
