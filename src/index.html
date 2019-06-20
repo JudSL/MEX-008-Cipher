@@ -8,88 +8,88 @@
   </head>
   <body>
     <header>
-      <img src ="../images/LogotipoCipher.png" alt="logo">
-      <h1>Informes policíacos</h1>
-      <input type="button" id = "help-button" value="?">
-      <section id = "instructions-page" class = "hide">
-        <input type="button" id ="close-button" value="X">
-        <h2>Instrucciones</h2>
-        <ol>
-          <li>Ingresa tu matrícula.</li>
-          <li>Da click en Ingresar.</li>
-        </ol>
-        <p>En esta página podrás elegir entre cifrar y descifrar texto.</p>
-        <h3>Para cifrar:</h3>
-        <ol>
-          <li>Ingresa a la sección de CIFRAR.</li>
-          <li>Elige una clave numérica que será utilizada como llave para cifrar y para que la otra parte pueda descifrar.</li>
-          <li>Ingresa tu texto a cifrar.</li>
-          <li>Da click en el botón Cifrar.</li>
-          <li>Listo, el texto cifrado aparecerá en la sección de abajo. Puedes copiarlo o enviarloa por correo electrónico o whatsapp.</li>
-        </ol>
-        <h3>Para descifrar:</h3>
-        <ol>
-          <li>Ingresa a la sección DESCIFRAR.</li>
-          <li>Ingresa la clave numérica que te dieron para descifrar el texto.</li>
-          <li>Ingresa el texto a descifrar.</li>
-          <li>Da click en el botón Descifrar.</li>
-          <li>Listo, el texto descifrado aparecerá en la sección de abajo.</li>
-        </ol>
-        <p>Para regresar a la página anterior da click en el botón Volver. Para salir de la página da click en Salir.</p>
-      </section>
+      <nav>
+        <img src ="../images/LogotipoCipher.png" alt="logo" id = "logo">
+        <h1>Informes policíacos</h1>
+        <input type="button" id="help-button" value="?">
+      </nav>
     </header>
+    <main>
     <section id = "login-page">
       <label for = "text" id= "registration">Matrícula:</label>
       <input type = "text" id= "registrationBox" placeholder = "Ingresa tu matrícula"
               required>
-      <input type = "button" id = "loginButton" value = "Ingresar">
+      <input type = "button" id = "loginButton" value = "Ingresar" class="botones">
     </section>
     <section id = "options-page" class = "hide">
       <h2>Bienvenido oficial No.</h2>
-      <h2 id = registrationPersonal></h2>
-      <h3>Elige la opción que quieres realizar</h3>
-      <input type = "button" id = "cipherButton" value = "Cifrar">
-      <input type = "button" id = "decipherButton" value = "Descifrar">
+      <h2 id = "registrationPersonal"></h2>
+      <h3>Seleccione la tarea que desea realizar</h3>
+      <input type = "button" id = "cipherButton" value = "Cifrar" class="botones">
+      <input type = "button" id = "decipherButton" value = "Descifrar" class="botones">
     </section>
     <section id = "cipher-page" class = "hide">
       <h4>CIFRAR</h4>
-      <div class = 'offset'>
-        <label class = 'selectOffset'>Elige una clave numérica:</label>
-        <input id = "offset-box-c" type = "number" class = 'offsetBox'>
+      <div class = "offset">
+        <label class = "selectOffset">Ingrese una clave numérica:</label>
+        <input id = "offset-box-c" type = "number" class = "offsetBox">
       </div>
       <div class="toCipher">
-        <label class = "textToCipher">Texto a cifrar:</label>
-        <textarea id = "box-to-cipher" class = "boxToCipher" placeholder="Ingresa el texto a cifrar"></textarea>
+        <label class = "textToCipher"></label>
+        <textarea id = "box-to-cipher" rows="5" cols="60" class = "boxToCipher" placeholder="Ingresa el texto a cifrar"></textarea>
       </div>
-      <input type = "button" id = "button-to-cipher" value="Cifrar">
+      <input type = "button" id = "button-to-cipher" value="Cifrar" class="botones">
       <div id = "cipher-text" class="cipherText">
         <p id = "box-cipher-text"></p>
       </div>
-      <input type="button" id = "button-clean-c" value="Limpiar">
-      <input type="button" id = "button-back-c" value="Volver">
-      <input type="button" id = "button-exit-c" value="Salir">
+      <input type="button" id = "button-back-c" value="Volver" class="botones">
+      <input type="button" id = "button-exit-c" value="Salir" class="botones">
     </section>
-
-    <section id='decipher-page' class="hide">
+    <section id="decipher-page" class="hide">
       <h4>DESCIFRAR</h4>
-      <div class='offset'>
-        <label class='selectOffset'>Ingresa clave numérica:</label>
-        <input id ="offset-box-d" type="number" class = 'offsetBox'>
+      <div class="offset">
+        <label class="selectOffset">Ingresa clave numérica:</label>
+        <input id ="offset-box-d" type="number" class = "offsetBox">
       </div>
       <div class="toDecipher">
-        <label class = "textToDecipher">Texto a descifrar:</label>
-        <textarea id="box-to-decipher" class="boxToDecipher" placeholder="Ingresa el texto a descifrar"></textarea>
+        <label class = "textToDecipher"></label>
+        <textarea id="box-to-decipher" rows="5" cols="60" class="boxToDecipher" placeholder="Ingresa el texto a descifrar"></textarea>
       </div>
-      <input type="button" id="button-to-decipher" value="Descifrar">
+      <input type="button" id="button-to-decipher" value="Descifrar" class="botones">
       <div id="decipher-text" class="decipherText">
           <p id="box-decipher-text"></p>
       </div>
-      <input type="button" id = "button-clean-d" value="Limpiar">
-      <input type="button" id = "button-back-d" value="Volver">
-      <input type="button" id = "button-exit-d" value="Salir">
+      <input type="button" id = "button-back-d" value="Volver" class="botones">
+      <input type="button" id = "button-exit-d" value="Salir" class="botones">
     </section>
-
+    <section id = "instructions-page" class = "hide">
+      <input type="button" id ="close-button" value="X">
+      <h2>Instrucciones</h2>
+      <ol>
+        <li>1. Ingresa tu matrícula.</li>
+        <li>2. Da click en Ingresar.</li>
+      </ol>
+      <p>En esta página podrás elegir entre cifrar y descifrar texto.</p>
+      <h3>Para cifrar:</h3>
+      <ol>
+        <li>1. Ingresa a la sección de CIFRAR.</li>
+        <li>2. Elige una clave numérica que será utilizada como llave para cifrar y para que la otra parte pueda descifrar.</li>
+        <li>3. Ingresa tu texto a cifrar.</li>
+        <li>4. Da click en el botón Cifrar.</li>
+        <li>5. Listo, el texto cifrado aparecerá en la sección de abajo. Puedes copiarlo o enviarlo por correo electrónico o whatsapp.</li>
+      </ol>
+      <h3>Para descifrar:</h3>
+      <ol>
+        <li>1. Ingresa a la sección DESCIFRAR.</li>
+        <li>2. Ingresa la clave numérica que te dieron para descifrar el texto.</li>
+        <li>3. Ingresa el texto a descifrar.</li>
+        <li>4. Da click en el botón Descifrar.</li>
+        <li>5.Listo, el texto descifrado aparecerá en la sección de abajo.</li>
+      </ol>
+      <p>Para regresar a la página anterior da click en el botón Volver. Para salir de la página da click en Salir.</p>
+  </section>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+  </main>
   </body>
 </html>

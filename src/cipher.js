@@ -3,7 +3,7 @@ window.cipher = {
     let codeModify = 0;
     let msgCipher = '';
       for (let i = 0; i < string.length; i++){
-        outputAscii = string.charCodeAt(i);
+        let outputAscii = string.charCodeAt(i);
           if (outputAscii >= 65 && outputAscii <= 90){
             codeModify = (outputAscii - 65 + offset) % 26 + 65;
           }
@@ -22,7 +22,7 @@ window.cipher = {
       let codeModify = 0;
       let msgDecipher = '';
         for (let i = 0; i < string.length; i++){
-          outputAscii = string.charCodeAt(i);
+          let  outputAscii = string.charCodeAt(i);
             if (outputAscii >= 65 && outputAscii <= 90){
               codeModify = (outputAscii - 90 - offset) % 26 +90;
             }
